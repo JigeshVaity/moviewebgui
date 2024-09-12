@@ -1,0 +1,187 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(images/bg.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    height: 32px;
+    margin-right: 10px;
+}
+
+.title {
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+.header-btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    color: #FFF;
+    background: #fd102c;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.movie-details {
+    margin-top: 30px;
+}
+
+.left-box {
+    color: white;
+    padding: 5px;
+}
+
+.left-box h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.left-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.casting img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left-box a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #FFF; /* Text color */
+    background: #fd102c; /* Default background color */
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-flex; /* Ensures the button doesn't stretch */
+    justify-content: center; /* Center the text within the button */
+    align-items: center; /* Center the content vertically */
+    margin-right: 10px;
+    margin-top: 35px;
+    max-width: 200px; /* Optional: Set a maximum width to avoid large stretching */
+    white-space: nowrap; /* Prevents text from wrapping */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scaling */
+}
+
+.left-box a:hover {
+    background-color: #e60012; /* Darker red color on hover */
+    color: #fff; /* Ensure the text color remains white */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.download-btn {
+    border: 2px solid white;
+    background: transparent; /* Default background */
+    color: white; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scaling */
+}
+
+.download-btn:hover {
+    background-color: #fd102c; /* Red background on hover */
+    color: #fff; /* Ensure the text color remains white */
+    border-color: #fd102c; /* Red border color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+
+.fa-solid {
+    margin-right: 5px;
+}
+
+.movie-img {
+    height: 350px;
+    box-shadow: -4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.series h3 {
+    color: white;
+}
+
+.series .movie-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.series img {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .movie-details .row {
+        flex-direction: column-reverse; /* Movie details come after image */
+    }
+
+    .movie-img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px; /* Add margin for spacing */
+    }
+
+    .left-box h1 {
+        font-size: 24px;
+    }
+
+    .left-box p {
+        font-size: 14px;
+    }
+
+    .left-box a {
+        display: block;
+        margin-bottom: 10px; /* Stack buttons vertically */
+    }
+
+    .series .movie-list {
+        flex-direction: column; /* Stack popular movies vertically */
+    }
+
+    .series img {
+        margin: 0 auto 20px; /* Center the image horizontally and add bottom margin */
+        display: block; /* Ensure the image behaves as a block element */
+        width: 80%; /* Make the movie images take 80% of the parent width */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+}
